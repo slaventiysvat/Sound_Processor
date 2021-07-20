@@ -1,0 +1,7 @@
+﻿  main.c
+D:\InWite\Sound_Processor\Visual_Studio\Math_opers\Math_Operations\Math_Operations\main.c(9,11): warning C4013: 'printf' undefined; assuming extern returning int
+  special_math.c
+D:\InWite\Sound_Processor\Visual_Studio\Math_opers\Math_Operations\Math_Operations\special_math.c(64,44): warning C4013: 'memory_allocate1D' undefined; assuming extern returning int
+D:\InWite\Sound_Processor\Visual_Studio\Math_opers\Math_Operations\Math_Operations\special_math.c(64,81): warning C4047: '=': 'float *' differs in levels of indirection from 'int'
+  Generating Code...
+  Math_Operations.vcxproj -> D:\InWite\Sound_Processor\Visual_Studio\Math_opers\Math_Operations\Debug\Math_Operations.exe

@@ -1,0 +1,10 @@
+﻿  math_lib.cpp
+  special_math.c
+D:\InWite\Sound_Processor\Visual_Studio\NLMS\NLMS_adaptive_filter\math_lib\special_math.c(42,53): warning C4013: 'malloc' undefined; assuming extern returning int
+D:\InWite\Sound_Processor\Visual_Studio\NLMS\NLMS_adaptive_filter\math_lib\special_math.c(42,75): warning C4312: 'type cast': conversion from 'int' to 'matrix_array *' of greater size
+D:\InWite\Sound_Processor\Visual_Studio\NLMS\NLMS_adaptive_filter\math_lib\special_math.c(54,45): warning C4013: 'memory_allocate1D' undefined; assuming extern returning int
+D:\InWite\Sound_Processor\Visual_Studio\NLMS\NLMS_adaptive_filter\math_lib\special_math.c(54,84): warning C4047: '=': 'float *' differs in levels of indirection from 'int'
+D:\InWite\Sound_Processor\Visual_Studio\NLMS\NLMS_adaptive_filter\math_lib\special_math.c(61,24): warning C4013: 'memory_deallocate1D' undefined; assuming extern returning int
+  s_malloc.c
+  Generating Code...
+  math_lib.vcxproj -> D:\InWite\Sound_Processor\Visual_Studio\RLS\RLS_adaptive_filter\x64\Debug\math_lib.lib
