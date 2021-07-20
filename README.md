@@ -3,3 +3,4 @@ Adaptive Noise Reduction using RLS algorithm, NLMS algorithm for Echo Cancelatio
 Now we can use only NLMS and RLS algorithms.
 The main.c function contains in ..\Visual_Studio\Sound_Processor_Half\RLS
 You can check RLS algorithm use your own raw files
+MATLAB folder contain MATALB files where I created my all algorithm.
