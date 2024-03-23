@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdint.h>
-#include <string.h >   //Для memcmp
+#include <string.h >   //for memcmp
 #include <conio.h>
 #include <time.h>
 #include "defines_values.h"
