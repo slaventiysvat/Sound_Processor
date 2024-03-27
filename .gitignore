@@ -1,6 +1,34 @@
 # Prerequisites
 *.d
 
+# Folders
+/Sound_Processor_V1.1/.vs
+/Sound_Processor_V1.1/Debug
+
+/drc_module/.vs
+/drc_module/Debug
+
+/filters_module/.vs
+/filters_module/Debug
+
+/Google_Tests/.vs
+/Google_Tests/Debug
+
+/Google_Mock/.vs
+/Google_Mock/Debug
+
+/maths_module/.vs
+/maths_module/Debug
+
+/rls_module/.vs
+/rls_module/Debug
+
+/nlms_module/.vs
+/nlms_module/Debug
+
+/Testing/.vs
+/Testing/Debug
+
 # Compiled Object files
 *.slo
 *.lo
