@@ -1,4 +1,0 @@
-﻿  special_math.c
-D:\InWite\Sound_Processor\Visual_Studio\Sound_Processor\maths_module\special_math.c(54,44): warning C4013: 'memory_allocate1D' undefined; assuming extern returning int
-D:\InWite\Sound_Processor\Visual_Studio\Sound_Processor\maths_module\special_math.c(54,81): warning C4047: '=': 'float *' differs in levels of indirection from 'int'
-  maths_module.vcxproj -> D:\InWite\Sound_Processor\Visual_Studio\Sound_Processor\Debug\maths_module.lib

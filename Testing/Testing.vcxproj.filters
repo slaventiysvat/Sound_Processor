@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\GoogleTests">
+      <UniqueIdentifier>{2d1deb31-a293-484d-aa79-71c8333dda2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\GoogleTests\src">
+      <UniqueIdentifier>{df9ffae7-e2eb-42a0-97eb-879b3144e698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GoogleTests">
+      <UniqueIdentifier>{85532394-29b9-40b0-9645-c05f846dc60f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GoogleTests\inc">
+      <UniqueIdentifier>{85714d1d-f95f-4aad-b629-45a97c2a3852}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="run_all_tersts.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="..\googletest\googletest\src\gtest_main.cc">
+      <Filter>Исходные файлы\GoogleTests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\googletest\googletest\src\gtest-all.cc">
+      <Filter>Исходные файлы\GoogleTests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\maths_module\special_math.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\maths_module\s_malloc.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\maths_module\special_math.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\maths_module\s_malloc.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

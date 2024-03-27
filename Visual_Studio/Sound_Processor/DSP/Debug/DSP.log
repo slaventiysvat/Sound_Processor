@@ -1,4 +1,0 @@
-﻿adaptive_filter_rls.obj : error LNK2019: unresolved external symbol _s_eye referenced in function _rls_init
-adaptive_filter_rls.obj : error LNK2019: unresolved external symbol _s_zeros referenced in function _rls_init
-adaptive_filter_rls.obj : error LNK2019: unresolved external symbol _memory_allocate1D referenced in function _rls_init
-D:\InWite\Sound_Processor\Visual_Studio\Sound_Processor\Debug\DSP.exe : fatal error LNK1120: 3 unresolved externals

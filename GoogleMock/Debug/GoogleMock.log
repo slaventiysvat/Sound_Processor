@@ -1,0 +1,11 @@
+﻿  gmock-all.cc
+  gmock.cc
+  gmock_main.cc
+  Generating Code...
+gmock-all.obj : warning LNK4006: "bool testing::FLAGS_gmock_catch_leaked_mocks" (?FLAGS_gmock_catch_leaked_mocks@testing@@3_NA) already defined in gmock.obj; second definition ignored
+gmock-all.obj : warning LNK4006: "int testing::FLAGS_gmock_default_mock_behavior" (?FLAGS_gmock_default_mock_behavior@testing@@3HA) already defined in gmock.obj; second definition ignored
+gmock-all.obj : warning LNK4006: "void __cdecl testing::InitGoogleMock(int *,char * *)" (?InitGoogleMock@testing@@YAXPAHPAPAD@Z) already defined in gmock.obj; second definition ignored
+gmock-all.obj : warning LNK4006: "void __cdecl testing::InitGoogleMock(int *,wchar_t * *)" (?InitGoogleMock@testing@@YAXPAHPAPA_W@Z) already defined in gmock.obj; second definition ignored
+gmock-all.obj : warning LNK4006: "void __cdecl testing::InitGoogleMock(void)" (?InitGoogleMock@testing@@YAXXZ) already defined in gmock.obj; second definition ignored
+gmock-all.obj : warning LNK4006: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > testing::FLAGS_gmock_verbose" (?FLAGS_gmock_verbose@testing@@3V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@A) already defined in gmock.obj; second definition ignored
+  GoogleMock.vcxproj -> C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\Sound_Processor_V1.1\Debug\GoogleMock.lib
