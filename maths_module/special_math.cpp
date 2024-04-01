@@ -1,6 +1,4 @@
-#include "special_math.h"
-#include "s_malloc.h"
-#include "stdio.h"
+#include "pch.h"
 
 /*Passing matrix parameters to a structure*/
 matrix_array matrix_struct_fill(float* matr_array, int rows, int columns) {

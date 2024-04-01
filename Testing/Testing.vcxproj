@@ -72,7 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\googletest\googlemock;..\googletest\googlemock\include;..\googletest\googletest\include;..\googletest\googletest\src;..\googletest\googletest\;..\drc_module;..\filters_module;../maths_module;..\nlms+module;..\rls_module;$(IncludePath)</IncludePath>
+    <IncludePath>..\googletest\googlemock;..\googletest\googlemock\include;..\googletest\googletest\include;..\googletest\googletest\src;..\googletest\googletest\;..\drc_module;..\filters_module;..\maths_module;..\nlms+module;..\rls_module;..\Sound_Processor_V1.1\Debug\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Sound_Processor_V1.1\Debug\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -90,10 +91,13 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>../googletest/googletest/src;../googletest/googletest/include;../googletest/googletest/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\Sound_Processor_V1.1\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>maths_module.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,13 +147,12 @@
   <ItemGroup>
     <ClCompile Include="..\googletest\googletest\src\gtest-all.cc" />
     <ClCompile Include="..\googletest\googletest\src\gtest_main.cc" />
-    <ClCompile Include="..\maths_module\special_math.c" />
-    <ClCompile Include="..\maths_module\s_malloc.c" />
     <ClCompile Include="run_all_tersts.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\maths_module\special_math.h" />
-    <ClInclude Include="..\maths_module\s_malloc.h" />
+    <ProjectReference Include="..\maths_module\maths_module.vcxproj">
+      <Project>{353c85c4-52f7-4875-aaed-a684f1c472b0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

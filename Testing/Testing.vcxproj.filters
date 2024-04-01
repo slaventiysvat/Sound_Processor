@@ -25,6 +25,9 @@
     <Filter Include="Файлы заголовков\GoogleTests\inc">
       <UniqueIdentifier>{85714d1d-f95f-4aad-b629-45a97c2a3852}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Librarys">
+      <UniqueIdentifier>{eda17780-11f5-4b9f-a95f-5b0640dd9287}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="run_all_tersts.cpp">
@@ -36,19 +39,5 @@
     <ClCompile Include="..\googletest\googletest\src\gtest-all.cc">
       <Filter>Исходные файлы\GoogleTests</Filter>
     </ClCompile>
-    <ClCompile Include="..\maths_module\special_math.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\maths_module\s_malloc.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\maths_module\special_math.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\maths_module\s_malloc.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

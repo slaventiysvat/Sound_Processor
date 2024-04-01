@@ -33,16 +33,22 @@
     <ClInclude Include="special_math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\drc_module\pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="maths_module.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="s_malloc.c">
+    <ClCompile Include="s_malloc.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="special_math.c">
+    <ClCompile Include="special_math.cpp">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\drc_module\pch.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

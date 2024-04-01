@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sound_Processor_V1.1", "Sound_Processor_V1.1.vcxproj", "{40489035-A67A-4B16-B76E-C98616714DF6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{353C85C4-52F7-4875-AAED-A684F1C472B0} = {353C85C4-52F7-4875-AAED-A684F1C472B0}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drc_module", "..\drc_module\drc_module.vcxproj", "{96FBA7D5-4EAC-41AF-9DD4-8DC68CFB14FB}"
 EndProject

@@ -10,6 +10,7 @@
 #include "defines_values.h"
 #include "special_math.h"
 #include "s_malloc.h"
+//test
 
 //allocating memory for all arrays
 short in_m[NUM_OF_SAMPLES] = { 0 }; //16bit values
@@ -18,6 +19,10 @@ short out[NUM_OF_SAMPLES] = { 0 };  //16bit values
 
 
 int main(int argc, char* argv[]) {
+
+	matrix_array Arr_1 = matrix_create(4, 6);
+	s_values(&Arr_1, 1.0);
+	print_matrix(&Arr_1);
 
 	FILE* fp_in_mic_m = fopen("../raw_in/alchimia_1_main_mic16_16.wav", "rb");
 	FILE* fp_in_mic_n = fopen("../raw_in/alchimia_1_noise_mic16_16.wav", "rb");

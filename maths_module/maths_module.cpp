@@ -1,21 +1,17 @@
 // maths_module.cpp : Defines the functions for the static library.
 //
 
-//#include "pch.h"
-//#include "framework.h"
-#include "special_math.h"
-#include "s_malloc.h"
-#include "stdio.h"
+#include "pch.h"
 
 //#include "test_print.hpp"
 // TODO: This is an example of a library function
-int main()
+void fnmathmodule()
 {
 
     //print_sucsess();
 
 
-    /*matrix_array Arr_1 = matrix_create(4, 6);
+    matrix_array Arr_1 = matrix_create(4, 6);
     printf("matrix 4x6 was created \n");
     print_matrix(&Arr_1);
 
@@ -68,7 +64,7 @@ int main()
 
         printf("Matrix A can't multiply by matrix B \n");
 
-    }*/
+    }
 
     matrix_array Arr_5 = matrix_create(3, 6);
     matrix_array Arr_6 = matrix_create(6, 3);
@@ -80,5 +76,4 @@ int main()
     matrix_transponze(&Arr_5, &Arr_6);
     printf("Matrix transponze_mat \n");
 
-    return 0;
 }

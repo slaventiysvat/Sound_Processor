@@ -1,5 +1,4 @@
-#include "s_malloc.h"
-#include "stdlib.h"
+#include "pch.h"
 
 float* memory_allocate1D(int n, int m) {
  
