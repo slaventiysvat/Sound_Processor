@@ -14,8 +14,8 @@
 /Google_Tests/.vs
 /Google_Tests/Debug
 
-/Google_Mock/.vs
-/Google_Mock/Debug
+/GoogleMock/.vs
+/GoogleMock/Debug
 
 /maths_module/.vs
 /maths_module/Debug
@@ -28,6 +28,9 @@
 
 /Testing/.vs
 /Testing/Debug
+
+/EigenLib/.vs
+/EigenLib/Debug
 
 # Compiled Object files
 *.slo
