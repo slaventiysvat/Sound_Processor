@@ -13,15 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\GoogleTests">
-      <UniqueIdentifier>{2e5058f8-b0b7-43ce-987f-6cf1d9eb8941}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\GoogleTests\src">
-      <UniqueIdentifier>{d9c606b1-ebe1-4f93-8ed7-a05f84a301c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\GoogleTests">
-      <UniqueIdentifier>{2fe5013a-cd78-4847-ac32-97990e527fa2}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -49,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="..\drc_module\pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="special_math_new.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
