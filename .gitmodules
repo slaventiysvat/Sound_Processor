@@ -4,3 +4,7 @@
 [submodule "eigen"]
 	path = eigen
 	url = https://gitlab.com/libeigen/eigen.git
+[submodule "AudioFileWAVReader"]
+	path = AudioFileWAVReader
+	url = https://github.com/slaventiysvat/AudioFileWAVReader.git
+	branch = master
