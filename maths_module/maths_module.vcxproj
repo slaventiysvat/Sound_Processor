@@ -110,6 +110,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -157,6 +158,7 @@
     <ClInclude Include="..\drc_module\pch.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="special_math.h" />
+    <ClInclude Include="special_math_new.h" />
     <ClInclude Include="s_malloc.h" />
   </ItemGroup>
   <ItemGroup>

@@ -90,7 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../maths_module;../drc_module;../filters_module;../nlms_module;../rls_module;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\eigen;../maths_module;../drc_module;../filters_module;../nlms_module;../rls_module;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,12 +109,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\Sound_Processor_V1.1\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -153,6 +155,9 @@
     <ClInclude Include="settings_file.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EigenLib\EigenLib.vcxproj">
+      <Project>{2bc83d1b-c502-467c-8b25-85cb47473ddb}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\maths_module\maths_module.vcxproj">
       <Project>{353c85c4-52f7-4875-aaed-a684f1c472b0}</Project>
     </ProjectReference>

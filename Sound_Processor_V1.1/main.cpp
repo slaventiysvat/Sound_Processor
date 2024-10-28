@@ -9,7 +9,17 @@
 #include <time.h>
 #include "defines_values.h"
 #include "special_math.h"
+#include "special_math_new.h"
 #include "s_malloc.h"
+#include <Eigen/Dense>
+#include <iostream>
+
+
+using Eigen::Matrix3d;
+using Eigen::Vector3d;
+using Eigen::MatrixXd;
+using Eigen::VectorXd;
+using Eigen::VectorXi;
 //test
 
 //allocating memory for all arrays
@@ -20,9 +30,26 @@ short out[NUM_OF_SAMPLES] = { 0 };  //16bit values
 
 int main(int argc, char* argv[]) {
 
-	matrix_array Arr_1 = matrix_create(4, 6);
-	s_values(&Arr_1, 1.0);
-	print_matrix(&Arr_1);
+	//MatrixXd m(5,5);
+	//MatrixXd m2(5, 5);
+
+	//std::cout << m * m2 << std::endl;
+
+	VectorXi vec1(NUM_OF_SAMPLES);
+
+	//Eigen::VectorXd a;
+	//Eigen::VectorXi b;
+
+	//Eigen::Vector::push_back<double>(a, 3.5);
+	//Eigen::Vector::push_back<int>(b, 2);
+
+	//eigen_matrix_multiply_test();
+
+	//matrix_array Arr_1 = matrix_create(4, 6);
+
+
+	//s_values(&Arr_1, 1.0);
+	//print_matrix(&Arr_1);
 
 	FILE* fp_in_mic_m = fopen("../raw_in/alchimia_1_main_mic16_16.wav", "rb");
 	FILE* fp_in_mic_n = fopen("../raw_in/alchimia_1_noise_mic16_16.wav", "rb");
@@ -61,6 +88,7 @@ int main(int argc, char* argv[]) {
 
 		len_in_m = fread(in_m, 2, NUM_OF_SAMPLES, fp_in_mic_m);
 		len_in_n = fread(in_n, 2, NUM_OF_SAMPLES, fp_in_mic_n);
+		//vec1 << in_n;
 
 		if (len_in_m < NUM_OF_SAMPLES) {
 
@@ -77,6 +105,7 @@ int main(int argc, char* argv[]) {
 		for (int i = 0; i < NUM_OF_SAMPLES; i++) {
 
 			out[i] = in_n[i];
+			vec1(i) = in_n[i];
 		}
 
 
@@ -85,6 +114,9 @@ int main(int argc, char* argv[]) {
 
 	}
 
+	std::cout << "vec1====================" << std::endl;
+	std::cout << vec1.dot(vec1) << std::endl;
+	std::cout << "vec1====================" << std::endl;
 
 	//after break
 

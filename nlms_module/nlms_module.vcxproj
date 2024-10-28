@@ -91,6 +91,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\slave\Desktop\Prepearing_to_interview\Self_Project_Sound_Processor\Sound_Procesor_V1.1\eigen</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>

@@ -27,6 +27,9 @@
     <ClInclude Include="..\drc_module\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="special_math_new.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="maths_module.cpp">
