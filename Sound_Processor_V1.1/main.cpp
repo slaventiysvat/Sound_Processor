@@ -49,8 +49,8 @@ void LoadAndSaveAudioFileAndPrintSummary()
 
     //---------------------------------------------------------------
     // 1. Set a file path to an audio file on your machine
-    const std::string filePathMain = std::string("../raw_in / alchimia_1_main_mic16_16.wav");
-	const std::string filePathNoise = std::string("../raw_in / alchimia_1_main_mic16_16.wav");
+    const std::string filePathMain = std::string("../raw_in/alchimia_1_main_mic16_16.wav");
+	const std::string filePathNoise = std::string("../raw_in/alchimia_1_main_mic16_16.wav");
     //---------------------------------------------------------------
     // 2. Create an AudioFile object and load the audio file
 
@@ -88,7 +88,22 @@ void LoadAndSaveAudioFileAndPrintSummary()
 	// 4. Save the AudioFile
 
 	std::string filePath = "sine-wave.wav"; // change this to somewhere useful for you
-	a.save("../raw_outmain-wave.wav", AudioFileFormat::Wave);
-	b.save("../raw_outnoise-wave.wav", AudioFileFormat::Wave);
+	bool SuccsessM = a.save("../raw_out/main-wave.wav", AudioFileFormat::Wave);
+	bool SuccsessN = b.save("../raw_out/noise-wave.wav", AudioFileFormat::Wave);
+
+	if (SuccsessM && SuccsessN) {
+
+		std::cout << "**********************" << std::endl;
+		std::cout << "Write WAV To Audio File Successfully" << std::endl;
+		std::cout << "**********************" << std::endl << std::endl;
+	
+	}
+	else {
+	
+		std::cout << "**********************" << std::endl;
+		std::cout << "Huston, we have a problem" << std::endl;
+		std::cout << "**********************" << std::endl << std::endl;
+	
+	}
 }
 
