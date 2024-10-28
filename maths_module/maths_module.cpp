@@ -2,7 +2,7 @@
 //
 
 #include "pch.h"
-
+#include <Eigen/Dense>
 //#include "test_print.hpp"
 // TODO: This is an example of a library function
 void fnmathmodule()
@@ -11,7 +11,7 @@ void fnmathmodule()
     //print_sucsess();
 
 
-    matrix_array Arr_1 = matrix_create(4, 6);
+    /*matrix_array Arr_1 = matrix_create(4, 6);
     printf("matrix 4x6 was created \n");
     print_matrix(&Arr_1);
 
@@ -74,6 +74,6 @@ void fnmathmodule()
     print_matrix(&Arr_5);
 
     matrix_transponze(&Arr_5, &Arr_6);
-    printf("Matrix transponze_mat \n");
+    printf("Matrix transponze_mat \n");*/
 
 }

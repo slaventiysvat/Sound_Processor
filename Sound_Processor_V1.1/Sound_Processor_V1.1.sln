@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32630.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sound_Processor_V1.1", "Sound_Processor_V1.1.vcxproj", "{40489035-A67A-4B16-B76E-C98616714DF6}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -28,6 +28,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Google_Tests", "..\Google_Tests\Google_Tests.vcxproj", "{2CB82946-81A7-4D34-9653-FACBF48E69B6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleMock", "..\GoogleMock\GoogleMock.vcxproj", "{BFC834C3-A70B-4650-B453-83FF081A1939}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WAVReader", "..\WAVReader\WAVReader.vcxproj", "{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EigenLib", "..\EigenLib\EigenLib.vcxproj", "{2BC83D1B-C502-467C-8B25-85CB47473DDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +113,22 @@ Global
 		{BFC834C3-A70B-4650-B453-83FF081A1939}.Release|x64.Build.0 = Release|x64
 		{BFC834C3-A70B-4650-B453-83FF081A1939}.Release|x86.ActiveCfg = Release|Win32
 		{BFC834C3-A70B-4650-B453-83FF081A1939}.Release|x86.Build.0 = Release|Win32
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Debug|x64.ActiveCfg = Debug|x64
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Debug|x64.Build.0 = Debug|x64
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Debug|x86.ActiveCfg = Debug|Win32
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Debug|x86.Build.0 = Debug|Win32
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Release|x64.ActiveCfg = Release|x64
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Release|x64.Build.0 = Release|x64
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Release|x86.ActiveCfg = Release|Win32
+		{D516AAE3-C0E1-4EDE-8600-0183470B6BDA}.Release|x86.Build.0 = Release|Win32
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Debug|x64.ActiveCfg = Debug|x64
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Debug|x64.Build.0 = Debug|x64
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Debug|x86.ActiveCfg = Debug|Win32
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Debug|x86.Build.0 = Debug|Win32
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Release|x64.ActiveCfg = Release|x64
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Release|x64.Build.0 = Release|x64
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Release|x86.ActiveCfg = Release|Win32
+		{2BC83D1B-C502-467C-8B25-85CB47473DDB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
