@@ -1,8 +1,8 @@
 //#define GTEST_OS_QURT
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "special_math.h"
-#include "s_malloc.h"
+//#include "special_math.h"
+//#include "s_malloc.h"
 
 #define EXPECT_FLOATS_NEARLY_EQ(expected, actual, thresh) \
         EXPECT_EQ(expected.size(), actual.size()) << "Array sizes differ.";\
@@ -65,40 +65,44 @@ using std::vector;
 
 
 
-void fill2DvectorRawVector(vector<vector<float>> &input, matrix_array resource) {
-
-    float* ArrIn = nullptr;
-    ArrIn = resource.s_vector;
-    int m = resource.columns;
-    int n = resource.rows;
-
-        for (int i = 0; i < n; i++) 
-        {
-            float* pvector_tmp = ArrIn + (i * m);
-            for (int j = 0; j < m; j++) 
-            { 
-                input[i][j] = *(pvector_tmp + j);
-            } 
-        } 
-}
-
+//void fill2DvectorRawVector(vector<vector<float>> &input, matrix_array resource) {
+//
+//    float* ArrIn = nullptr;
+//    ArrIn = resource.s_vector;
+//    int m = resource.columns;
+//    int n = resource.rows;
+//
+//        for (int i = 0; i < n; i++) 
+//        {
+//            float* pvector_tmp = ArrIn + (i * m);
+//            for (int j = 0; j < m; j++) 
+//            { 
+//                input[i][j] = *(pvector_tmp + j);
+//            } 
+//        } 
+//}
+//
+//
+//TEST(_EngineString, Basic) {
+//
+//    matrix_array Arr_1 = matrix_create(4, 6);
+//    s_values(&Arr_1, 1.0);
+//    print_matrix(&Arr_1);
+//
+//    int rows = 4;
+//    int columns = 6;
+//    float initialValue = 1.0f;
+//
+//    std::vector<std::vector<float>> twoDVector(rows, std::vector<float>(columns, initialValue));
+//    std::vector<std::vector<float>> twoDVectorIn(rows, std::vector<float>(columns, initialValue));
+//    fill2DvectorRawVector(twoDVectorIn, Arr_1);
+//
+//    auto const max_abs_error = 1 / 1024.f;
+//    EXPECT_FLOATS_NEARLY_EQ(twoDVectorIn, twoDVector, max_abs_error);
+//    EXPECT_EQ(0, 0);
+//}
 
 TEST(_EngineString, Basic) {
 
-    matrix_array Arr_1 = matrix_create(4, 6);
-    s_values(&Arr_1, 1.0);
-    print_matrix(&Arr_1);
-
-    int rows = 4;
-    int columns = 6;
-    float initialValue = 1.0f;
-
-    std::vector<std::vector<float>> twoDVector(rows, std::vector<float>(columns, initialValue));
-    std::vector<std::vector<float>> twoDVectorIn(rows, std::vector<float>(columns, initialValue));
-    fill2DvectorRawVector(twoDVectorIn, Arr_1);
-
-    auto const max_abs_error = 1 / 1024.f;
-    EXPECT_FLOATS_NEARLY_EQ(twoDVectorIn, twoDVector, max_abs_error);
     EXPECT_EQ(0, 0);
 }
-

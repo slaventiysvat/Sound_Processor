@@ -11,6 +11,8 @@
 #include "special_math.h"
 #include "special_math_new.h"
 #include "s_malloc.h"
+#include "AudioFile.h"
+#include <Eigen/Dense>
 #include <Eigen/Dense>
 #include <iostream>
 
@@ -27,115 +29,66 @@ short in_m[NUM_OF_SAMPLES] = { 0 }; //16bit values
 short in_n[NUM_OF_SAMPLES] = { 0 }; //16bit values
 short out[NUM_OF_SAMPLES] = { 0 };  //16bit values
 
+void LoadAndSaveAudioFileAndPrintSummary();
 
 int main(int argc, char* argv[]) {
 
-	//MatrixXd m(5,5);
-	//MatrixXd m2(5, 5);
-
-	//std::cout << m * m2 << std::endl;
-
-	VectorXi vec1(NUM_OF_SAMPLES);
-
-	//Eigen::VectorXd a;
-	//Eigen::VectorXi b;
-
-	//Eigen::Vector::push_back<double>(a, 3.5);
-	//Eigen::Vector::push_back<int>(b, 2);
-
-	//eigen_matrix_multiply_test();
-
-	//matrix_array Arr_1 = matrix_create(4, 6);
-
-
-	//s_values(&Arr_1, 1.0);
-	//print_matrix(&Arr_1);
-
-	FILE* fp_in_mic_m = fopen("../raw_in/alchimia_1_main_mic16_16.wav", "rb");
-	FILE* fp_in_mic_n = fopen("../raw_in/alchimia_1_noise_mic16_16.wav", "rb");
-
-	FILE* fp_out = fopen("../raw_out/out.waw", "wb");
-
-	if (!fp_in_mic_m) {
-
-		perror("File opening failed");
-		return EXIT_FAILURE;
-	}
-
-	if (!fp_in_mic_n) {
-
-		perror("File opening failed");
-		return EXIT_FAILURE;
-
-	}
-
-	if (!fp_out) {
-
-		perror("File opening failed");
-		return EXIT_FAILURE;
-
-	}
-
-	size_t len_out = 0;
-	size_t len_in_m = 0;
-	size_t len_in_n = 0;
-
-	int tst_val_size = NUM_OF_SAMPLES;
-
-
-	while (1) {
-
-
-		len_in_m = fread(in_m, 2, NUM_OF_SAMPLES, fp_in_mic_m);
-		len_in_n = fread(in_n, 2, NUM_OF_SAMPLES, fp_in_mic_n);
-		//vec1 << in_n;
-
-		if (len_in_m < NUM_OF_SAMPLES) {
-
-			break;
-
-		}
-
-		if (len_in_n < NUM_OF_SAMPLES) {
-
-			break;
-
-		}
-
-		for (int i = 0; i < NUM_OF_SAMPLES; i++) {
-
-			out[i] = in_n[i];
-			vec1(i) = in_n[i];
-		}
-
-
-
-		len_out = fwrite(out, 2, NUM_OF_SAMPLES, fp_out);
-
-	}
-
-	std::cout << "vec1====================" << std::endl;
-	std::cout << vec1.dot(vec1) << std::endl;
-	std::cout << "vec1====================" << std::endl;
-
-	//after break
-
-	short* out_short = (short*)malloc(sizeof(short) * len_in_m);
-	clock_t begin = clock();
-	len_out = fwrite(out_short, 2, len_in_m, fp_out);
-	clock_t end = clock();
-	float time_spent = (float)(end - begin) / CLOCKS_PER_SEC;
-	printf("spended time %f \n", time_spent);
-	printf("%d\n", len_in_m);
-	printf("%d\n", len_in_n);
-	printf("%d\n", len_out);
-	fclose(fp_in_mic_m);
-	fclose(fp_in_mic_n);
-	fclose(fp_out);
-
-	printf("All is okay");
+	LoadAndSaveAudioFileAndPrintSummary();
 	_getch();
 	return 0;
 
+}
+
+//=======================================================================
+void LoadAndSaveAudioFileAndPrintSummary()
+{
+    //---------------------------------------------------------------
+    std::cout << "**********************" << std::endl;
+    std::cout << "Load Audio WAV File and Print Summary" << std::endl;
+    std::cout << "**********************" << std::endl << std::endl;
+
+    //---------------------------------------------------------------
+    // 1. Set a file path to an audio file on your machine
+    const std::string filePathMain = std::string("../raw_in / alchimia_1_main_mic16_16.wav");
+	const std::string filePathNoise = std::string("../raw_in / alchimia_1_main_mic16_16.wav");
+    //---------------------------------------------------------------
+    // 2. Create an AudioFile object and load the audio file
+
+    AudioFile<uint16_t> a;
+    bool loadedOKMain = a.load(filePathMain); 
+	/** If you hit this assert then the file path above
+     probably doesn't refer to a valid audio file */
+	assert(loadedOKMain);
+	AudioFile<uint16_t> b;
+	bool loadedOKNoise = b.load(filePathNoise);
+    assert(loadedOKNoise);
+
+    //---------------------------------------------------------------
+    // 3. Let's print out some key details
+	std::cout << " =============== Main Signal ================ " << std::endl;
+    std::cout << "Bit Depth: " << a.getBitDepth() << std::endl;
+    std::cout << "Sample Rate: " << a.getSampleRate() << std::endl;
+    std::cout << "Num Channels: " << a.getNumChannels() << std::endl;
+    std::cout << "Length in Seconds: " << a.getLengthInSeconds() << std::endl;
+    std::cout << std::endl;
+
+	std::cout << " =============== Noise Signal ================ " << std::endl;
+	std::cout << "Bit Depth: " << b.getBitDepth() << std::endl;
+	std::cout << "Sample Rate: " << b.getSampleRate() << std::endl;
+	std::cout << "Num Channels: " << b.getNumChannels() << std::endl;
+	std::cout << "Length in Seconds: " << b.getLengthInSeconds() << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "**********************" << std::endl;
+	std::cout << "Running Example: Write WAV To Audio File" << std::endl;
+	std::cout << "**********************" << std::endl << std::endl;
+
+
+	//---------------------------------------------------------------
+	// 4. Save the AudioFile
+
+	std::string filePath = "sine-wave.wav"; // change this to somewhere useful for you
+	a.save("../raw_outmain-wave.wav", AudioFileFormat::Wave);
+	b.save("../raw_outnoise-wave.wav", AudioFileFormat::Wave);
 }
 

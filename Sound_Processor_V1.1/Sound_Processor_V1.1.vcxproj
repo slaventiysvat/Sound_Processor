@@ -125,6 +125,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../rls_module;../nlms_module;../maths_module;../filters_module;../eigen;../drc_module;../AudioFileWAVReader</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -160,6 +162,9 @@
     </ProjectReference>
     <ProjectReference Include="..\maths_module\maths_module.vcxproj">
       <Project>{353c85c4-52f7-4875-aaed-a684f1c472b0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\WAVReader\WAVReader.vcxproj">
+      <Project>{d516aae3-c0e1-4ede-8600-0183470b6bda}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

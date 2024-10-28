@@ -120,12 +120,14 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_VARIADIC_MAX=10;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../googletest/googlemock;../googletest/googletest;../googletest/googletest/include;../googletest/googlemock/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,6 +152,12 @@
     <ClCompile Include="run_all_tersts.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GoogleMock\GoogleMock.vcxproj">
+      <Project>{bfc834c3-a70b-4650-b453-83ff081a1939}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Google_Tests\Google_Tests.vcxproj">
+      <Project>{2cb82946-81a7-4d34-9653-facbf48e69b6}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\maths_module\maths_module.vcxproj">
       <Project>{353c85c4-52f7-4875-aaed-a684f1c472b0}</Project>
     </ProjectReference>
