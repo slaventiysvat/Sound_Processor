@@ -6,7 +6,7 @@ You can check RLS algorithm using your own raw files
 MATLAB folder contains MATALB files where I created my 
 all algorithms for voice processing and noise reduction.
 
-21.08.2024 Addeв Eigen Library as a submodule to my project, 
+21.08.2024 Added Eigen Library as a submodule to my project, 
 I hope my math function will be faster and more convenient.
 Also, here i have Google Tests as a submodule it is cool
 In general, i could use vcpkg or make, but not for this moment
