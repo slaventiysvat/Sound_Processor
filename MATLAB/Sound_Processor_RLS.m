@@ -62,21 +62,21 @@ rls_signal = [];
 
 for i = 1:1:first_frames 
     
- noise_signal = x(head:tale);
- desired_signal = v(head:tale);  
- %filtered signal with bypass FIR filter
- %================ VAD ========================
- [vad_answer, VADPar]= VAD(desired_signal, VADPar);
- %=================DTD=========================
- [noise_signal,dtd_struct] = double_talk_detector(desired_signal,noise_signal,dtd_struct);
- %================train RLS===================
- [desired_signal,rls_st] = RLSFilterIt(noise_signal,desired_signal,rls_st,vad_answer);
- %filtered signal with bypass FIR filter
- [desired_signal,s_conv_st] = section_conv(desired_signal,s_conv_st);
- signal = [signal  desired_signal'];
- vad_answer_arr = [vad_answer_arr  vad_answer.*ones(1,size_f)];
- head = head + size_f;
- tale = tale + size_f;
+    noise_signal = x(head:tale);
+    desired_signal = v(head:tale);  
+    %filtered signal with bypass FIR filter
+    %================ VAD ========================
+    [vad_answer, VADPar]= VAD(desired_signal, VADPar);
+    %=================DTD=========================
+    [noise_signal,dtd_struct] = double_talk_detector(desired_signal,noise_signal,dtd_struct);
+    %================train RLS===================
+    [desired_signal,rls_st] = RLSFilterIt(noise_signal,desired_signal,rls_st,vad_answer);
+    %filtered signal with bypass FIR filter
+    [desired_signal,s_conv_st] = section_conv(desired_signal,s_conv_st);
+    signal = [signal  desired_signal'];
+    vad_answer_arr = [vad_answer_arr  vad_answer.*ones(1,size_f)];
+    head = head + size_f;
+    tale = tale + size_f;
  
 end
 
@@ -84,20 +84,20 @@ end
 first_frames = first_frames + 1;
 for i = first_frames:1:N_fr - 2
     
- noise_signal = x(head:tale);
- desired_signal = v(head:tale);  
- %================ VAD ========================
- [vad_answer, VADPar]= VAD(desired_signal, VADPar);
- %=================DTD=========================
- [noise_signal,dtd_struct] = double_talk_detector(desired_signal,noise_signal,dtd_struct);
- %================train RLS===================
- [desired_signal,rls_st] = RLSFilterIt(noise_signal,desired_signal,rls_st,vad_answer);
-  %filtered signal with bypass FIR filter
- [desired_signal,s_conv_st] = section_conv(desired_signal,s_conv_st);
- signal = [signal desired_signal'];
- vad_answer_arr = [vad_answer_arr  vad_answer.*ones(1,size_f)];
- head = head + size_f;
- tale = tale + size_f;
+    noise_signal = x(head:tale);
+    desired_signal = v(head:tale);  
+    %================ VAD ========================
+    [vad_answer, VADPar]= VAD(desired_signal, VADPar);
+    %=================DTD=========================
+    [noise_signal,dtd_struct] = double_talk_detector(desired_signal,noise_signal,dtd_struct);
+    %================train RLS===================
+    [desired_signal,rls_st] = RLSFilterIt(noise_signal,desired_signal,rls_st,vad_answer);
+    %filtered signal with bypass FIR filter
+    [desired_signal,s_conv_st] = section_conv(desired_signal,s_conv_st);
+    signal = [signal desired_signal'];
+    vad_answer_arr = [vad_answer_arr  vad_answer.*ones(1,size_f)];
+    head = head + size_f;
+    tale = tale + size_f;
 
 end
 toc
@@ -120,28 +120,28 @@ legend('Original Signal','VAD')
 sound(signal,Fs)
 
 function s_conv_st = section_conv_init(Wz,size_Wz)
-s_conv_st.Wz = Wz;
-s_conv_st.size_wz = size_Wz;
-s_conv_st.buffer = zeros(size_Wz-1,1);
+    s_conv_st.Wz = Wz;
+    s_conv_st.size_wz = size_Wz;
+    s_conv_st.buffer = zeros(size_Wz-1,1);
 end
 
 function [conv_rez,s_conv_st] = section_conv(frame,s_conv_st)
 
- X = [s_conv_st.buffer;frame];
- conv_rez = conv(X,s_conv_st.Wz,'valid');
- s_conv_st.buffer = frame(end - (s_conv_st.size_wz - 2):end);
+    X = [s_conv_st.buffer;frame];
+    conv_rez = conv(X,s_conv_st.Wz,'valid');
+    s_conv_st.buffer = frame(end - (s_conv_st.size_wz - 2):end);
  
 end
 
 function rls_st = rls_init(order,fr_factor,delta_param)
-rls_st.p = order;
-rls_st.lambda =  fr_factor;
-rls_st.laminv =  1/fr_factor;
-rls_st.delta  = delta_param;
-rls_st.w = zeros(order,1);             % filter coefficients
-rls_st.P = delta_param*eye(order);     % inverse correlation matrix
-rls_st.buff_n = zeros(order,1);        % filter buff noise
-rls_st.buff_x = zeros(order,1);        % filter buff signal + noise
+    rls_st.p = order;
+    rls_st.lambda =  fr_factor;
+    rls_st.laminv =  1/fr_factor;
+    rls_st.delta  = delta_param;
+    rls_st.w = zeros(order,1);             % filter coefficients
+    rls_st.P = delta_param*eye(order);     % inverse correlation matrix
+    rls_st.buff_n = zeros(order,1);        % filter buff noise
+    rls_st.buff_x = zeros(order,1);        % filter buff signal + noise
 end
 
 function [e,rls_st] = RLSFilterIt(n,x,rls_st,vad_dec)
@@ -185,6 +185,10 @@ e       = x*.0;                  % error signal (output)      345x1
     
 end
 
+function size_f = get_size_of_frame(time_of_one_frame,fs)
+    t_frame = time_of_one_frame * fs;
+    size_f = ceil(t_frame);
+end
 
 % function rls_st = rls_init_to_c(order,fr_factor,delta_param,frame_size)
 % rls_st.p = order;

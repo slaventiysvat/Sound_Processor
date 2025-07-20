@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  maths_module.cpp
+  special_math.cpp
+  special_math_new.cpp
+  s_malloc.cpp
+  Generating Code...
+  maths_module.vcxproj -> D:\PROGRAMMING\Prepearing_to_interview_my_projects\My_Pet_Project\Sound_Processor\Sound_Processor_V1.1\x64\Debug\maths_module.lib
