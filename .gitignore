@@ -1,36 +1,49 @@
-# Prerequisites
-*.d
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.vcxproj.filters.user
 
-# Folders
-/Sound_Processor_V1.1/.vs
-/Sound_Processor_V1.1/Debug
+# Build results
+bin/
+obj/
+lib/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+[Bb]uilds/
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
 
-/drc_module/.vs
-/drc_module/Debug
+# Build outputs
+*.dll
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.iobj
+*.ipdb
 
-/filters_module/.vs
-/filters_module/Debug
+# Logs
+*.log
+logs/
+soundprocessor.log*
 
-/Google_Tests/.vs
-/Google_Tests/Debug
-
-/GoogleMock/.vs
-/GoogleMock/Debug
-
-/maths_module/.vs
-/maths_module/Debug
-
-/rls_module/.vs
-/rls_module/Debug
-
-/nlms_module/.vs
-/nlms_module/Debug
-
-/Testing/.vs
-/Testing/Debug
-
-/EigenLib/.vs
-/EigenLib/Debug
+# Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Object files
 *.slo
@@ -38,29 +51,52 @@
 *.o
 *.obj
 
-# Temporal Matlab Files
-*.asv
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
 
-# Precompiled Headers
-*.gch
-*.pch
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# JetBrains Rider
+.idea/
+*.sln.iml
 
-# Fortran module files
-*.mod
-*.smod
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# MATLAB folder (якщо великий або не потрібен)
+# MATLAB/
 
-# Executables
-*.exe
-*.out
-*.app
+# Raw input/output files
+raw_in/*.wav
+raw_out/*.wav
+raw_in/*.pcm
+raw_out/*.pcm
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE_BIN/
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Build artifacts in test examples
+plugins/*/examples/*.exe
+plugins/*/examples/*.obj
+plugins/*/examples/*.pdb
