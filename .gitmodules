@@ -1,0 +1,10 @@
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest.git
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "AudioFileWAVReader"]
+	path = AudioFileWAVReader
+	url = https://github.com/slaventiysvat/AudioFileWAVReader.git
+	branch = master
